@@ -12,11 +12,11 @@ export R_HISTFILE='domino.Rhistory'
 printenv >> ~/.Renviron
 
 # Set initial working directory, which is the diretory RStudio opens up to
-mkdir -p ~/.rstudio/monitored/user-settings/
-echo -e "initialWorkingDirectory=\"${DRT_WORKING_DIR:-"${DOMINO_WORKING_DIR}"}\"\n" >> ~/.rstudio/monitored/user-settings/user-settings
+# mkdir -p ~/.rstudio/monitored/user-settings/
+# echo -e "initialWorkingDirectory=\"${DRT_WORKING_DIR:-"${DOMINO_WORKING_DIR}"}\"\n" >> ~/.rstudio/monitored/user-settings/user-settings
 
 mkdir -p ~/.config/rstudio
-echo -e "\"editor_theme\":\"Dracula\",\"initial_working_directory\":\"/mnt\"}" >> ~/.config/rstudio/rstudio-prefs.json
+echo -e "\"{editor_theme\":\"Dracula\",\"initial_working_directory\":\"/mnt\"}" >> ~/.config/rstudio/rstudio-prefs.json
 
 mkdir -p /tmp/rstudio-server
 sudo chown -R ubuntu:ubuntu /tmp/rstudio-server
