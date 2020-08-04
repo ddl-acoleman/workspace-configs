@@ -16,7 +16,7 @@ printenv >> ~/.Renviron
 # echo -e "initialWorkingDirectory=\"${DRT_WORKING_DIR:-"${DOMINO_WORKING_DIR}"}\"\n" >> ~/.rstudio/monitored/user-settings/user-settings
 
 mkdir -p ~/.config/rstudio
-echo -e "\"{editor_theme\":\"Dracula\",\"initial_working_directory\":\"/mnt\"}" >> ~/.config/rstudio/rstudio-prefs.json
+echo -e "{\"editor_theme\":\"Dracula\",\"initial_working_directory\":\"/mnt\"}" >> ~/.config/rstudio/rstudio-prefs.json
 
 mkdir -p /tmp/rstudio-server
 sudo chown -R ubuntu:ubuntu /tmp/rstudio-server
