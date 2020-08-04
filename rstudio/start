@@ -19,4 +19,4 @@ mkdir -p /tmp/rstudio-server
 sudo chown -R ubuntu:ubuntu /tmp/rstudio-server
 export RSTUDIO_SERVER_DATA_DIR=/tmp/rstudio-server
 export USER=ubuntu
-/usr/lib/rstudio-server/bin/rserver --www-port=8888 --auth-none=1 --server-daemonize=0 --server-app-armor-enabled=0 --auth-validate-users=0
+/usr/lib/rstudio-server/bin/rserver --www-port=8888 --auth-none=1 --server-daemonize=0 --server-app-armor-enabled=0 --auth-validate-users=0 --server-data-dir="/tmp/rstudio-server" --server-pid-file="/tmp/rstudio-server/rstudio-server.pid"
