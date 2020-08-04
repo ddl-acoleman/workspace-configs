@@ -18,4 +18,5 @@ echo -e "initialWorkingDirectory=\"${DRT_WORKING_DIR:-"${DOMINO_WORKING_DIR}"}\"
 mkdir -p /tmp/rstudio-server
 sudo chown -R ubuntu:ubuntu /tmp/rstudio-server
 export RSTUDIO_SERVER_DATA_DIR=/tmp/rstudio-server
+sudo su -Eu ubuntu -
 /usr/lib/rstudio-server/bin/rserver --www-port=8888 --auth-none=1 --server-daemonize=0 --server-app-armor-enabled=0 --server-data-dir="$RSTUDIO_SERVER_DATA_DIR" --server-pid-file="$RSTUDIO_SERVER_DATA_DIR/rstudio-server.pid"
